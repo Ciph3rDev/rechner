@@ -1,0 +1,87 @@
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: rgb(39, 34, 42);
+}
+
+.calculator {
+    width: 200px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+#display {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 32px;
+    width: 95%;
+    text-align: left;  /* Eingaben erscheinen von links */
+    background-color: rgb(39, 34, 42);
+    color: whitesmoke;
+    border: none;
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    transform-origin: center center;
+}
+
+button {
+    padding: 10px;
+    font-size: 32px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    color: whitesmoke;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+button:nth-child(5), button:nth-child(9), button:nth-child(13), button:nth-child(17) {
+    text-align: left;  /* Linke Spalte */
+}
+
+button:nth-child(6), button:nth-child(10), button:nth-child(14), button:nth-child(18) {
+    text-align: center; /* Mittlere Spalte */
+}
+
+button:nth-child(7), button:nth-child(11), button:nth-child(15), button:nth-child(19) {
+    text-align: right;  /* Rechte Spalte */
+}
+
+button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(8), button:nth-child(12) {
+    cursor: pointer;
+}
+
+button:nth-child(5):hover, button:nth-child(7):hover, button:nth-child(9):hover, button:nth-child(11):hover, 
+button:nth-child(13):hover, button:nth-child(15):hover {
+    background-color: rgb(50, 50, 50); /* Farbe bei Hover für ungerade Zahlen */
+}
+
+button:nth-child(6):hover, button:nth-child(8):hover, button:nth-child(10):hover, button:nth-child(12):hover,
+button:nth-child(14):hover, button:nth-child(16):hover, button:nth-child(18):hover {
+    background-color: rgb(49, 22, 14); /* Farbe bei Hover für gerade Zahlen */
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(8), button:nth-child(12):hover {
+    cursor: pointer;  /* Zeigefinger bei den Grundrechenarten */
+}
+
+button:last-child {
+    position: relative;
+    top: -10px;  /* Delete Button nach oben verschieben */
+}
